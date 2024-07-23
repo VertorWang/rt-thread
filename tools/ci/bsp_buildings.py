@@ -146,10 +146,18 @@ if __name__ == "__main__":
     count = 0
 
     rtt_root = os.getcwd()
-    srtt_bsp = os.getenv('SRTT_BSP').split(',')
+    srtt_bsp = os.listdir("bsp/stm32")
+    stm32_folders = []
+    for dir in srtt_bsp:
+        if dir.startswith('stm32'):
+            stm32_folders.append(dir)
+            print(f"====={dir}===")
+    exit
+    #srtt_bsp = os.getenv('SRTT_BSP').split(',')
 
-    for bsp in srtt_bsp:
+    for bsp in stm32_folders:
         count += 1
+        bsp = "stm32/" + bsp
         print(f"::group::Compiling BSP: =={count}=== {bsp} ====")
         res = build_bsp(bsp)
         if not res:

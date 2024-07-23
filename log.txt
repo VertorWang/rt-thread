@@ -1,0 +1,208 @@
+=====stm32f072-st-nucleo===
+=====stm32f091-st-nucleo===
+=====stm32wle5-yizhilian-lm402===
+::group::Compiling BSP: ==1=== stm32/stm32f072-st-nucleo ====
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+Packages list is empty.
+You can use < menuconfig > command to select online packages.
+Then use < pkgs --update > command to install them.
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo -j4 [0m
+[1;32mscons -c[0m
+::endgroup::
+::group::	Compiling BSP: ==2=== stm32/stm32f072-st-nucleo rtduino.attach===
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+.config:1190: warning: BSP_USING_ARDUINO (defined at board/Kconfig:10) set more than once. Old value "n", new value "y".
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+package name : b'perf_counter', ver : b'v2.2.4.1' 
+package name : b'RTduino', ver : b'latest' 
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo -j4 --strict[0m
+applications/arduino_main.cpp:11:10: fatal error: Arduino.h: No such file or directory
+   11 | #include <Arduino.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+scons: *** [build/applications/arduino_main.o] Error 1
+applications/arduino_pinout/pins_arduino.c:11:10: fatal error: Arduino.h: No such file or directory
+   11 | #include <Arduino.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+scons: *** [build/applications/arduino_pinout/pins_arduino.o] Error 1
+[1;32mscons -c[0m
+::error::build stm32/stm32f072-st-nucleo rtduino.attach failed.
+::endgroup::
+::group::	Compiling BSP: ==3=== stm32/stm32f072-st-nucleo nano.attach===
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+.config:1190: warning: RT_USING_NANO (defined at /workspaces/rt-thread/src/Kconfig:46) set more than once. Old value "n", new value "y".
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+Packages list is empty.
+You can use < menuconfig > command to select online packages.
+Then use < pkgs --update > command to install them.
+[1;32mscons -C bsp/stm32/stm32f072-st-nucleo -j4 --strict[0m
+[1;32mscons -c[0m
+::endgroup::
+::group::Compiling BSP: ==4=== stm32/stm32f091-st-nucleo ====
+[1;32mscons -C bsp/stm32/stm32f091-st-nucleo --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+Packages list is empty.
+You can use < menuconfig > command to select online packages.
+Then use < pkgs --update > command to install them.
+[1;32mscons -C bsp/stm32/stm32f091-st-nucleo -j4 [0m
+[1;32mscons -c[0m
+::endgroup::
+::group::	Compiling BSP: ==5=== stm32/stm32f091-st-nucleo nano.attach===
+[1;32mscons -C bsp/stm32/stm32f091-st-nucleo --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+.config:1194: warning: RT_USING_NANO (defined at /workspaces/rt-thread/src/Kconfig:46) set more than once. Old value "n", new value "y".
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+Packages list is empty.
+You can use < menuconfig > command to select online packages.
+Then use < pkgs --update > command to install them.
+[1;32mscons -C bsp/stm32/stm32f091-st-nucleo -j4 --strict[0m
+[1;32mscons -c[0m
+::endgroup::
+::group::Compiling BSP: ==6=== stm32/stm32wle5-yizhilian-lm402 ====
+[1;32mscons -C bsp/stm32/stm32wle5-yizhilian-lm402 --pyconfig-silent[0m
+Kconfig:5: warning: BSP_ROOT has 'option env="BSP_DIR"', but the environment variable BSP_DIR is not set
+Kconfig:5: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename BSP_DIR to BSP_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:10: warning: RTT_ROOT has 'option env="RTT_DIR"', but the environment variable RTT_DIR is not set
+Kconfig:10: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename RTT_DIR to RTT_ROOT (so that the symbol name matches the environment variable name).
+Kconfig:15: warning: Kconfiglib expands environment variables in strings directly, meaning you do not need 'option env=...' "bounce" symbols. For compatibility with the C tools, rename PKGS_DIR to PKGS_ROOT (so that the symbol name matches the environment variable name).
+warning: PKG_USING_RGPOWER (defined at /root/.env/packages/packages/peripherals/RgPower/Kconfig:2) has leading or trailing whitespace in its prompt
+warning: the default selection RT_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:104) is not contained in the choice
+warning: the choice symbol RT_USING_LWIP212 (defined at /workspaces/rt-thread/components/net/lwip/Kconfig:28) is selected by the following symbols, but select/imply has no effect on choice symbols
+ - RT_CHERRYUSB_HOST_CDC_ECM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:201)
+ - RT_CHERRYUSB_HOST_CDC_RNDIS (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:209)
+ - RT_CHERRYUSB_HOST_CDC_NCM (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:217)
+ - RT_CHERRYUSB_HOST_ASIX (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:240)
+ - RT_CHERRYUSB_HOST_RTL8152 (defined at /workspaces/rt-thread/components/drivers/usb/cherryusb/Kconfig:248)
+ - PKG_CHERRYUSB_HOST_CDC_RNDIS (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:201)
+ - PKG_CHERRYUSB_HOST_CDC_ECM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:208)
+ - PKG_CHERRYUSB_HOST_CDC_NCM (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:215)
+ - PKG_CHERRYUSB_HOST_ASIX (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:237)
+ - PKG_CHERRYUSB_HOST_RTL8152 (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:244)
+warning: the default selection CYBSP_HOST_WAKE_IRQ_EVENT_FALLING (undefined) of <choice> (defined at /root/.env/packages/packages/iot/wifi-host-driver/Kconfig:113) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+warning: the default selection PKG_CHERRYUSB_DEVICE_TEMPLATE (undefined) of <choice> (defined at /root/.env/packages/packages/system/CherryUSB/Kconfig:104) is not contained in the choice
+warning: the choice symbol PKG_USING_CMSIS_DSP_LATEST_VERSION (defined at /root/.env/packages/packages/system/CMSIS/CMSIS-DSP/Kconfig:18, /root/.env/packages/packages/signalprocess/CMSIS-DSP/Kconfig:87) is defined with a prompt outside the choice
+[1;32mpkgs --update[0m
+[1;32mpkgs --list[0m
+Packages list is empty.
+You can use < menuconfig > command to select online packages.
+Then use < pkgs --update > command to install them.
+[1;32mscons -C bsp/stm32/stm32wle5-yizhilian-lm402 -j4 [0m
+[1;32mscons -c[0m
+::endgroup::
