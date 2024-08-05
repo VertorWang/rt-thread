@@ -210,6 +210,24 @@
         "bsp/stm32/stm32wl55-st-nucleo": true,
         "bsp/stm32/stm32wle5-yizhilian-lm401": true,
         "bsp/stm32/stm32wle5-yizhilian-lm402": true,
+
+        "bsp/stm32/libraries/STM32F0xx_HAL": true,
+        "bsp/stm32/libraries/STM32F1xx_HAL": true,
+        "bsp/stm32/libraries/STM32F2xx_HAL": true,
+        "bsp/stm32/libraries/STM32F3xx_HAL": true,
+        "bsp/stm32/libraries/STM32F7xx_HAL": true,
+        "bsp/stm32/libraries/STM32G0xx_HAL": true,
+        "bsp/stm32/libraries/STM32G4xx_HAL": true,
+        "bsp/stm32/libraries/STM32H5xx_HAL": true,
+        "bsp/stm32/libraries/STM32H7RSxx_HAL": true,
+        "bsp/stm32/libraries/STM32H7xx_HAL": true,
+        "bsp/stm32/libraries/STM32L0xx_HAL": true,
+        "bsp/stm32/libraries/STM32L1xx_HAL": true,
+        "bsp/stm32/libraries/STM32L5xx_HAL": true,
+        "bsp/stm32/libraries/STM32MPxx_HAL": true,
+        "bsp/stm32/libraries/STM32U5xx_HAL": true,
+        "bsp/stm32/libraries/STM32WBxx_HAL": true,
+        "bsp/stm32/libraries/STM32WLxx_HAL": true,
     },
     "files.associations": {
         "*.h": "c",
@@ -225,7 +243,9 @@
         "chrono": "c",
         "random": "c",
         "limits": "c",
-        "cstdarg": "c"
+        "cstdarg": "c",
+        "typeinfo": "c",
+        "fstream": "c"
     },
     "[markdown]": {
         "editor.trimAutoWhitespace": false,
